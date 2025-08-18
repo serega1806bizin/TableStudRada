@@ -220,6 +220,6 @@
   .header img { width: 64px; height: 64px; }
   .header h1 { font-size: 1.4rem; }
   .header h2 { font-size: 0.85rem; }
-
+  .table-wrapper {font-size: 0.7rem;}
   th, td { padding: 6px 8px; }
 }
