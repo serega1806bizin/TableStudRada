@@ -158,19 +158,25 @@
       }
 
 
-      .student[data-curator]::after {
-          content: attr(data-curator);
-          display: none;
-          font-size: 0.75rem;
-          color: #80deea;
-          margin-top: 4px;
-          animation: fadeIn 0.3s ease-in-out;
-      }
+.student[data-curator]::after {
+  content: attr(data-curator);
+  display: block;
+  font-size: 0.75rem;
+  color: #80deea;
+  margin-top: 4px;
 
-      .student[data-curator]:hover::after,
-      .student.curator-open::after {
-          display: block;
-      }
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.student[data-curator]:hover::after,
+.student.curator-open::after {
+  max-height: 40px; /* или побольше, если текст может быть длиннее */
+  opacity: 1;
+}
 
       .student {
           outline: none;
@@ -223,3 +229,4 @@
   .table-wrapper {font-size: 0.7rem;}
   th, td { padding: 6px 8px; }
 }
+
