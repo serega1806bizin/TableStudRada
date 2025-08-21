@@ -11,7 +11,6 @@
       .container {
           max-width: 1400px;
           margin: auto;
-          padding: 40px 20px;
       }
 
       .header {
@@ -158,25 +157,26 @@
       }
 
 
-.student[data-curator]::after {
-  content: attr(data-curator);
-  display: block;
-  font-size: 0.75rem;
-  color: #80deea;
-  margin-top: 4px;
+      .student[data-curator]::after {
+          content: attr(data-curator);
+          display: block;
+          font-size: 0.75rem;
+          color: #80deea;
+          margin-top: 4px;
 
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
+          max-height: 0;
+          opacity: 0;
+          overflow: hidden;
 
-  transition: max-height 0.4s ease, opacity 0.4s ease;
-}
+          transition: max-height 0.4s ease, opacity 0.4s ease;
+      }
 
-.student[data-curator]:hover::after,
-.student.curator-open::after {
-  max-height: 40px; /* или побольше, если текст может быть длиннее */
-  opacity: 1;
-}
+      .student[data-curator]:hover::after,
+      .student.curator-open::after {
+          max-height: 40px;
+          /* или побольше, если текст может быть длиннее */
+          opacity: 1;
+      }
 
       .student {
           outline: none;
@@ -207,26 +207,48 @@
           vertical-align: top;
       }
 
-:root {
-  --left-col-w: 200px;   
-  --col-min: 240px;     
-  --head1-h: 44px;      
-}
+      :root {
+          --left-col-w: 200px;
+          --col-min: 240px;
+          --head1-h: 44px;
+      }
 
 
-@media (max-width: 640px) {
-  :root {
-    --left-col-w: 140px;
-    --col-min: 190px;
-    --head1-h: 40px; 
-  }
+      @media (max-width: 640px) {
+          :root {
+              --left-col-w: 140px;
+              --col-min: 190px;
+              --head1-h: 40px;
+          }
 
-  .container { padding: 24px 12px; }
-  .header { gap: 12px; margin-bottom: 18px; }
-  .header img { width: 64px; height: 64px; }
-  .header h1 { font-size: 1.4rem; }
-  .header h2 { font-size: 0.85rem; }
-  .table-wrapper {font-size: 0.7rem;}
-  th, td { padding: 6px 8px; }
-}
+          .container {
+              padding: 24px 12px;
+          }
 
+          .header {
+              gap: 12px;
+              margin-bottom: 18px;
+          }
+
+          .header img {
+              width: 64px;
+              height: 64px;
+          }
+
+          .header h1 {
+              font-size: 1.4rem;
+          }
+
+          .header h2 {
+              font-size: 0.85rem;
+          }
+
+          .table-wrapper {
+              font-size: 0.7rem;
+          }
+
+          th,
+          td {
+              padding: 6px 8px;
+          }
+      }
